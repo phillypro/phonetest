@@ -1,4 +1,25 @@
-<head></head>
-<body>
-<a href="sms:1-408-555-1212">New SMS Message</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Redirect Example</title>
+    <script type="text/javascript">
+        // Function to detect mobile device
+        function mobileDeviceDetect() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                // Meta redirect to the specified link
+                // Replace 'yourLinkDetails' with the actual details of your link
+                var url = "sms:1-404-518-7008&body=send me the e-book";
+                window.location.replace(url);
+            }
+        }
+    </script>
+</head>
+<body onload="mobileDeviceDetect();">
+    <h1>Welcome to Our Website</h1>
+    <p>If you are on a mobile device, you will be redirected to send an iMessage.</p>
+    <!-- Your page content goes here -->
 </body>
+</html>
